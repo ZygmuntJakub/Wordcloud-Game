@@ -32,15 +32,15 @@ class Game {
         let emptyAnswers = 0;
 
         this.question.allWords.forEach((word, index) => {
-            if (this.question!.goodWords.includes(word.value)) {
-                this.question!.allWords[index].correct = true;
+            if (this.question?.goodWords.includes(word.value)) {
+                this.question.allWords[index].correct = true;
                 if (word.checked) {
                     goodAnswers += 1;
                 } else {
                     emptyAnswers += 1;
                 }
-            } else if (word.checked) {
-                this.question!.allWords[index].correct = false;
+            } else if (word.checked && this.question?.allWords) {
+                this.question.allWords[index].correct = false;
                 wrongAnswers += 1;
             }
         });
