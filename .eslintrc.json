@@ -25,7 +25,10 @@
         "react/require-default-props": 0,
         "react/react-in-jsx-scope": "off",
         "react/jsx-props-no-spreading": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+        "react/jsx-filename-extension": [
+            1,
+            { "extensions": [".tsx", ".ts", ".js"] }
+        ],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
         "import/extensions": [
@@ -33,7 +36,8 @@
             "ignorePackages",
             {
                 "ts": "never",
-                "tsx": "never"
+                "tsx": "never",
+                "js": "never"
             }
         ],
         "no-shadow": "off",
