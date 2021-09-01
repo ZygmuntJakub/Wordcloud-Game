@@ -18,12 +18,18 @@ export const gameSlice = createSlice({
             state.game.addPlayer(player);
         },
 
+        changeNickname: (state, action: PayloadAction<string>) => {
+            if (state.game.player)
+                state.game.player.setNickname(action.payload);
+        },
+
         addQuestion: (state, action: PayloadAction<Question>) => {
             state.game.addQuestion(action.payload);
         },
     },
 });
 
-export const { startNewGame, addPlayer, addQuestion } = gameSlice.actions;
+export const { startNewGame, addPlayer, addQuestion, changeNickname } =
+    gameSlice.actions;
 
 export default gameSlice.reducer;

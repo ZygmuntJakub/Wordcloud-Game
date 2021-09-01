@@ -1,14 +1,7 @@
-import { useEffect } from "react";
+import WelcomeScreen from "../../templates/WelcomeScreen";
 
 const HomePage = () => {
-    useEffect(() => {
-        fetch("/api/question")
-            .then((res) => res.json())
-            .then((data) => data)
-            .catch((error) => error);
-    }, []);
-
-    return <div>Home Page</div>;
+    return <WelcomeScreen />;
 };
 
 export default HomePage;
