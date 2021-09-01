@@ -12,6 +12,10 @@ class Question {
         this.allWords = allWords.map((word) => new Word(word));
         this.goodWords = goodWords;
     }
+
+    selectWord(index: number) {
+        this.allWords[index].checked = !this.allWords[index].checked;
+    }
 }
 
 export default Question;

@@ -1,4 +1,4 @@
-import WelcomeScreen from "../../templates/WelcomeScreen";
+import WelcomeScreen from "organisms/WelcomeSection";
 
 const HomePage = () => {
     return <WelcomeScreen />;

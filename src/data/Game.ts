@@ -11,12 +11,18 @@ class Game {
 
     result: Result | undefined;
 
+    checked = false;
+
     addPlayer(player: Player) {
         this.player = player;
     }
 
     addQuestion(question: Question) {
         this.question = question;
+    }
+
+    selectWord(index: number) {
+        this.question?.selectWord(index);
     }
 
     calculateResult() {
@@ -50,6 +56,8 @@ class Game {
             wrongAnswers,
             emptyAnswers
         );
+
+        this.checked = true;
     }
 }
 

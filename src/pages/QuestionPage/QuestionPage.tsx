@@ -1,9 +1,15 @@
 import useFetchQuestion from "hooks/useFetchQuestion";
+import QuestionSection from "organisms/QuestionSection";
+import FullPageLoader from "atoms/FullPageLoader";
+import useCheckPlayer from "hooks/useCheckPlayer";
 
 const QuestionPage = () => {
-    useFetchQuestion();
+    const [loading] = useFetchQuestion();
+    useCheckPlayer();
 
-    return <div>Question Page</div>;
+    if (loading) return <FullPageLoader />;
+
+    return <QuestionSection />;
 };
 
 export default QuestionPage;

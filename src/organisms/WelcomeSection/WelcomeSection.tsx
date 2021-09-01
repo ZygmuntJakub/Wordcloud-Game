@@ -1,8 +1,8 @@
 import React from "react";
-import NicknameForm from "organisms/NicknameForm";
+import NicknameForm from "molecules/NicknameForm";
 import H1 from "atoms/H1";
 
-const WelcomeScreen = () => {
+const WelcomeSection = () => {
     return (
         <div>
             <H1>Wordcloud game</H1>
@@ -11,4 +11,4 @@ const WelcomeScreen = () => {
     );
 };
 
-export default WelcomeScreen;
+export default WelcomeSection;

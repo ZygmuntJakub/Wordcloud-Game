@@ -26,10 +26,24 @@ export const gameSlice = createSlice({
         addQuestion: (state, action: PayloadAction<Question>) => {
             state.game.addQuestion(action.payload);
         },
+
+        selectWord: (state, action: PayloadAction<number>) => {
+            state.game.selectWord(action.payload);
+        },
+
+        checkAnswer: (state) => {
+            state.game.calculateResult();
+        },
     },
 });
 
-export const { startNewGame, addPlayer, addQuestion, changeNickname } =
-    gameSlice.actions;
+export const {
+    startNewGame,
+    addPlayer,
+    addQuestion,
+    changeNickname,
+    selectWord,
+    checkAnswer,
+} = gameSlice.actions;
 
 export default gameSlice.reducer;

@@ -1,5 +1,9 @@
+import ResultSection from "organisms/ResultSection";
+import useCheckPlayer from "hooks/useCheckPlayer";
+
 const ResultPage = () => {
-    return <div>Result Page</div>;
+    useCheckPlayer();
+    return <ResultSection />;
 };
 
 export default ResultPage;

@@ -3,10 +3,10 @@ import getQuestion from "mocks/getQuestion";
 
 const handlers = [
     rest.get("/api/question", (req, res, ctx) => {
-        return res(ctx.status(200), ctx.json(getQuestion()));
+        return res(ctx.delay(1_000), ctx.status(200), ctx.json(getQuestion()));
     }),
     rest.get("/api/error", (req, res, ctx) => {
-        return res(ctx.status(403));
+        return res(ctx.delay(1_000), ctx.status(403));
     }),
 ];
 
