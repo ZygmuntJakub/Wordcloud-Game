@@ -1,13 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
+
+import worker from "mocks/browser";
+import store from "utils/store";
+
+import "react-toastify/dist/ReactToastify.css";
+
 import App from "./App";
-import worker from "./mocks/browser";
 
 worker.start().then(() => {
     ReactDOM.render(
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>,
+        <Provider store={store}>
+            <React.StrictMode>
+                <App />
+                <ToastContainer />
+            </React.StrictMode>
+        </Provider>,
         document.getElementById("root")
     );
 });

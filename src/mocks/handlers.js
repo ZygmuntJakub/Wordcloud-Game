@@ -5,6 +5,9 @@ const handlers = [
     rest.get("/api/question", (req, res, ctx) => {
         return res(ctx.status(200), ctx.json(getQuestion()));
     }),
+    rest.get("/api/error", (req, res, ctx) => {
+        return res(ctx.status(403));
+    }),
 ];
 
 export default handlers;
