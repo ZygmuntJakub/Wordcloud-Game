@@ -28,7 +28,9 @@ const Word = ({ index }: PropsTypes) => {
 
     return (
         <Container randomMoveX={randomMoveX} randomMoveY={randomMoveY}>
-            <AnswerLabel correct={correct}>{answerText()}</AnswerLabel>
+            <AnswerLabel data-testid="answer-label" correct={correct}>
+                {answerText()}
+            </AnswerLabel>
             <StyledWord
                 checked={checked}
                 correct={correct}

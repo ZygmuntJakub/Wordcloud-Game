@@ -11,18 +11,26 @@ const NicknameForm = () => {
     const [nickname, setNickname, saveNickname] = usePlayer();
     const isDisabled = !nickname;
 
+    const handleStart = () => history.push("/question");
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            saveNickname();
+            handleStart();
+        }
+    };
+
     return (
         <Container>
             <Input
+                data-testid="nickname-input"
                 placeholder="Enter your nickname here..."
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
                 onBlur={() => saveNickname()}
+                onKeyDown={handleKeyDown}
             />
-            <Button
-                onClick={() => history.push("/question")}
-                disabled={isDisabled}
-            >
+            <Button onClick={handleStart} disabled={isDisabled}>
                 play
             </Button>
         </Container>
