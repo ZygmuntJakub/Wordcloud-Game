@@ -15,4 +15,4 @@
 
 ##Additional info
 - React components organized according to [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-- App deployed on Netlify - [link]()
+- App deployed on Netlify - [link](https://hungry-goldwasser-e4c470.netlify.app/)

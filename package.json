@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint '**/*.{ts,tsx}' --fix"
+    "lint": "eslint '**/*.{ts,tsx}' --fix",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
