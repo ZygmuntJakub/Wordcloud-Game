@@ -6,7 +6,7 @@ interface TextProps {
 }
 
 const Text = styled.h1<TextProps>`
-    color: ${({ secondary }) => secondary && "blue"};
+    color: ${({ secondary }) => secondary && "coral"};
     margin: ${({ margin }) => margin};
 `;
 
