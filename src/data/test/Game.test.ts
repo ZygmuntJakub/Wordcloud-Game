@@ -56,7 +56,6 @@ describe("Game tests", () => {
         game.calculateResult();
 
         // Then
-
         expect(game.result?.score).toEqual(-3);
     });
 });

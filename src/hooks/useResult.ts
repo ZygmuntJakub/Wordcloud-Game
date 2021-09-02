@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "utils/store";
-import { startNewGame } from "../store/game";
+import { startNewGame } from "store/game";
 
 const useResult = () => {
     const history = useHistory();

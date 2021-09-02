@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 
-import QuestionApi from "../types/QuestionApi";
-import Question from "../data/Question";
+import QuestionApi from "types/QuestionApi";
+import Question from "data/Question";
 
 const mapQuestionApiData = ({
     question,

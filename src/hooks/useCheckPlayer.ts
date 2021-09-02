@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
-import { useAppSelector } from "../utils/store";
+import { useAppSelector } from "utils/store";
 
 const useCheckPlayer = () => {
     const history = useHistory();

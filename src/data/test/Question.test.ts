@@ -1,5 +1,4 @@
-import Question from "../Question";
-import mockQuestion from "../../mocks/mockQuestion";
+import mockQuestion from "mocks/mockQuestion";
 
 describe("Question tests", () => {
     test("Should select question", () => {

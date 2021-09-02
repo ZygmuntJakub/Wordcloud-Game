@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { addQuestion } from "store/game";
 import fetchQuestion from "api/fetchQuestion";
-import mapQuestionApiData from "../utils/mapQuestionApiData";
+import mapQuestionApiData from "utils/mapQuestionApiData";
 
 const useFetchQuestion = () => {
     const dispatch = useDispatch();
