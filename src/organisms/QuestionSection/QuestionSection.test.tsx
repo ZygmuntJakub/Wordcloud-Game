@@ -32,7 +32,7 @@ describe("QuestionSection tests", () => {
         // Then
 
         expect(
-            store.getState().game.game.question!.allWords[0].checked
+            store.getState().game.game.question?.allWords[0].checked
         ).toEqual(true);
     });
 
