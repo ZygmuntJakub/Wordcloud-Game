@@ -2,7 +2,7 @@
 
 - `npm start` - Run the app
 - `npm test` - Run tests
-- `npm build` - Build the project
+- `npm run build` - Build the project
 
 ##Libraries
 
