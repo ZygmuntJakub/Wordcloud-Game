@@ -2,6 +2,7 @@ import Question from "atoms/Question";
 import WordCloud from "molecules/WordCloud";
 import Button from "atoms/Button";
 import useQuestion from "hooks/useQuestion";
+import { Container } from "./styled";
 
 const QuestionSection = () => {
     const [showAnswer, question, handleCheckAnswers, handleFinishGame] =
@@ -13,11 +14,11 @@ const QuestionSection = () => {
     );
 
     return (
-        <div>
+        <Container>
             <Question>{question}</Question>
             <WordCloud />
             {QuestionButton}
-        </div>
+        </Container>
     );
 };
 

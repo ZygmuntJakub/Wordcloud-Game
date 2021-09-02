@@ -12,8 +12,6 @@ const CongratulationsText = ({ nickname, score }: PropTypes) => {
 
     const points = () => {
         switch (score) {
-            case 0:
-                return "";
             case 1:
                 return "point";
             default:
@@ -22,8 +20,8 @@ const CongratulationsText = ({ nickname, score }: PropTypes) => {
     };
     return (
         <>
-            <Text>{firstParagraph}</Text>
-            <Text>Your score:</Text>
+            <Text margin="0.5rem 0">{firstParagraph}</Text>
+            <Text margin="0.5rem 0">Your score:</Text>
             <Text secondary>
                 {score} {points()}
             </Text>

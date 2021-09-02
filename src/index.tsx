@@ -7,6 +7,8 @@ import worker from "mocks/browser";
 import store from "utils/store";
 
 import "react-toastify/dist/ReactToastify.css";
+import "./normalize.css";
+import "./global.css";
 
 import App from "./App";
 

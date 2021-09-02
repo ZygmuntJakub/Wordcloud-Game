@@ -3,6 +3,7 @@ import usePlayer from "hooks/usePlayer";
 import Button from "atoms/Button";
 import Input from "atoms/Input";
 import { useHistory } from "react-router-dom";
+import { Container } from "./styled";
 
 const NicknameForm = () => {
     const history = useHistory();
@@ -11,8 +12,9 @@ const NicknameForm = () => {
     const isDisabled = !nickname;
 
     return (
-        <div>
+        <Container>
             <Input
+                placeholder="Enter your nickname here..."
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
                 onBlur={() => saveNickname()}
@@ -23,7 +25,7 @@ const NicknameForm = () => {
             >
                 play
             </Button>
-        </div>
+        </Container>
     );
 };
 
